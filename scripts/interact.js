@@ -7,7 +7,7 @@ async function main() {
     const SnipingBot = await ethers.getContractFactory("SnipingBot");
     const snipingBot = SnipingBot.attach(contractAddress);
 
-    // Example: Snipe a token
+    //Snipe a token
     const tokenIn = "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"; // WETH
     const tokenOut = "0xYourTokenAddressHere";
     const fee = 3000; // Example fee tier
@@ -17,7 +17,7 @@ async function main() {
 
     await snipingBot.snipe(tokenIn, tokenOut, fee, amountIn, amountOutMin, sqrtPriceLimitX96);
 
-    // Example: Sell the token
+    //Sell the token
     const amountOut = ethers.utils.parseEther("1");
     const amountInMax = ethers.utils.parseUnits("1000", 18);
 
